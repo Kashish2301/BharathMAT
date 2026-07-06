@@ -1,0 +1,92 @@
+{
+  "theme": "dark",
+  "archetype": "Swiss & High-Contrast (Forensic Intelligence)",
+  "colors": {
+    "background": "#071018",
+    "surface": "#111827",
+    "surface_glass": "rgba(17, 24, 39, 0.8)",
+    "border": "#233047",
+    "border_light": "rgba(35, 48, 71, 0.5)",
+    "primary": "#3B82F6",
+    "accents": {
+      "cyan": "#06B6D4",
+      "green": "#10B981",
+      "orange": "#F97316",
+      "red": "#EF4444"
+    },
+    "text": {
+      "primary": "#F8FAFC",
+      "secondary": "#94A3B8",
+      "muted": "#64748B"
+    }
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "IBM Plex Sans",
+    "mono_font": "JetBrains Mono",
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl font-bold tracking-tight",
+      "h2": "text-2xl sm:text-3xl font-semibold tracking-tight",
+      "h3": "text-xl font-medium",
+      "body": "text-base leading-relaxed",
+      "small_label": "text-xs font-mono uppercase tracking-[0.2em]"
+    }
+  },
+  "layout_and_spacing": {
+    "container_padding": "p-6 md:p-8",
+    "grid_system": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+    "card_style": "bg-[#111827]/80 backdrop-blur-xl border border-[#233047] rounded-xl shadow-[0_4px_24px_-8px_rgba(0,0,0,0.5)]",
+    "glass_header": "sticky top-0 z-50 bg-[#071018]/70 backdrop-blur-2xl border-b border-[#233047]"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-medium rounded-xl px-6 py-3 transition-all duration-200 shadow-[0_0_15px_rgba(59,130,246,0.3)]",
+      "secondary": "bg-[#111827] border border-[#233047] hover:border-blue-500/50 text-slate-200 px-4 py-2 rounded-xl transition-all duration-200"
+    },
+    "inputs": {
+      "textarea": "w-full bg-[#071018] border border-[#233047] rounded-xl p-4 text-slate-200 focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 outline-none transition-all placeholder:text-slate-600 resize-none",
+      "text_input": "w-full bg-[#071018] border border-[#233047] rounded-xl p-4 text-slate-200 focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 outline-none transition-all placeholder:text-slate-600"
+    },
+    "tabs": "flex space-x-2 bg-[#071018] p-1 rounded-xl border border-[#233047] w-fit",
+    "tab_active": "bg-[#111827] text-white shadow-sm rounded-lg border border-[#233047]",
+    "tab_inactive": "text-slate-400 hover:text-slate-200"
+  },
+  "motion": {
+    "page_load": "framer-motion initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}",
+    "card_reveal": "framer-motion initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, staggerChildren: 0.1 }}",
+    "progress_bar": "transition-all duration-1000 ease-out"
+  },
+  "media": {
+    "background_image": "https://images.unsplash.com/photo-1774791242463-ad4fd6386cb3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGRpZ2l0YWwlMjBuZXR3b3JrJTIwZGFyayUyMGJsdWV8ZW58MHx8fHwxNzgzMjIyNzE3fDA&ixlib=rb-4.1.0&q=85",
+    "background_opacity": "0.05"
+  },
+  "icons_library": "@phosphor-icons/react",
+  "specific_sections": {
+    "header": {
+      "logo": "Shield icon (Phosphor), colored with cyan or blue to hint at intelligence/tech.",
+      "badge": "Small pill, border-green-500/30 bg-green-500/10 text-green-400 font-mono text-xs uppercase"
+    },
+    "disclaimer": "Fixed at bottom or prominent below input. bg-orange-500/10 border-l-4 border-orange-500 text-orange-200 p-4 text-sm font-medium.",
+    "risk_card": {
+      "low": "border-green-500/50 shadow-[0_0_30px_rgba(16,185,129,0.15)] text-green-400",
+      "medium": "border-orange-500/50 shadow-[0_0_30px_rgba(249,115,22,0.15)] text-orange-400",
+      "high": "border-red-500/50 shadow-[0_0_30px_rgba(239,68,68,0.15)] text-red-400"
+    },
+    "warning_signs": "3 bento cards, grid-cols-1 md:grid-cols-3, using glassmorphism. Icons in red/orange.",
+    "empty_state": "Central shield icon (large, 64px+, text-slate-700), text-slate-400. Subtle pulsing animation.",
+    "error_state": "Card with bg-red-500/10 background, border-red-500/50, friendly text."
+  },
+  "testing": {
+    "requirement": "All interactive and key informational elements MUST include a data-testid attribute in kebab-case."
+  },
+  "instructions_to_main_agent": [
+    "Install and use Phosphor Icons (@phosphor-icons/react) for a technical, crisp cyber forensics look.",
+    "Build the dashboard using React, Tailwind CSS, and Framer Motion.",
+    "Load 'Outfit' (headings), 'IBM Plex Sans' (body), and 'JetBrains Mono' (mono/tags) via Google Fonts.",
+    "Apply the background image globally with very low opacity (e.g., 5-10%) and mix-blend-screen to create a subtle cyber texture over the #071018 background.",
+    "Ensure the Risk Assessment card clearly uses the color mappings (Green/Yellow/Red) based on the risk level.",
+    "The Disclaimer ('AI Risk Assessment...') must be highly visible and persistent as per requirements.",
+    "Add data-testid attributes to all tabs, buttons, inputs, and result cards.",
+    "Implement smooth fade-ins and card slide upward animations using framer-motion."
+  ]
+}
